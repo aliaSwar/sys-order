@@ -12,7 +12,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('customers.index',['orders'=>auth()->user()->orders]);
     }
 
     /**
@@ -20,7 +20,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('customers.create');
     }
 
     /**
