@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('amount');
+            $table->foreignId('customer_id');
+            $table->boolean('is_approve')->default(false);
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }
